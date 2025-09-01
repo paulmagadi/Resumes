@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Esther Wanjiru Kiogora — CV</title>
+  <style>
+    :root{
+      --brand:#0a6b80;        /* header brand color */
+      --brand-ink:#0a3b44;    /* dark ink variant */
+      --subtle:#f3f7f8;       /* light background */
+      --ink:#0f1f24;          /* main text */
+      --muted:#4a5b61;        /* secondary text */
+      --accent:#ffb703;       /* tiny highlight */
+    }
+    html,body{height:100%;}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--subtle),#fff 240px);
+      color:var(--ink); font: 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+    .page{
+      max-width: 900px; margin:24px auto; background:#fff; box-shadow:0 10px 30px rgba(0,0,0,.08); border-radius:18px; overflow:hidden;
+    }
+    /* --- Header --- */
+    .hero{
+      position:relative; padding:28px 28px 20px; color:#fff;
+      background: radial-gradient(1200px 300px at -200px 0, rgba(255,255,255,.18), transparent),
+                  linear-gradient(90deg, var(--brand), #067089, #075c6a);
+    }
+    .hero .toprow{ display:flex; align-items:flex-end; gap:16px; }
+    .avatar{
+      width:72px; height:72px; border-radius:50%; background:rgba(255,255,255,.15);
+      display:grid; place-items:center; flex:0 0 auto; box-shadow: inset 0 0 0 2px rgba(255,255,255,.25);
+    }
+    .avatar svg{ width:38px; height:38px; opacity:.9; }
+    .titleblock{ flex:1; }
+    h1{ margin:0; font-size:28px; letter-spacing:.4px; }
+    .tagline{ margin:.25rem 0 0; font-size:14px; opacity:.95; }
+    .divider{
+      height:2px; background: linear-gradient(90deg, rgba(255,255,255,.45), rgba(255,255,255,0));
+      margin:14px 0 10px; border-radius:999px;
+    }
+    .contacts{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:13px; opacity:.95; }
+    .chip{ display:flex; align-items:center; gap:8px; }
+    .chip svg{ width:16px; height:16px; opacity:.95; }
+
+    /* --- Buttons --- */
+    .actions{
+      position:absolute; right:16px; top:16px; display:flex; gap:10px;
+    }
+    .btn{ border:0; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600; letter-spacing:.2px;
+          background:#fff; color:var(--brand-ink); box-shadow:0 4px 16px rgba(0,0,0,.15);
+    }
+    .btn.secondary{ background:rgba(255,255,255,.15); color:#fff; box-shadow:none; border:1px solid rgba(255,255,255,.35); }
+    .btn:active{ transform:translateY(1px); }
+
+    /* --- Body layout --- */
+    .content{ display:grid; grid-template-columns: 1.35fr .85fr; gap:26px; padding:24px 26px 32px; }
+    @media (max-width: 820px){ .content{ grid-template-columns:1fr; } .actions{ position:static; margin:14px 0 0; }
+      .hero{ padding-bottom: 14px; }
+    }
+
+    h2{ font-size:13px; letter-spacing:.14em; color:var(--brand-ink); margin:0 0 10px; text-transform:uppercase; }
+    section{ margin-bottom:20px; }
+
+    .card{ background: #fff; border:1px solid #e9eef0; border-radius:14px; padding:16px 16px; }
+    .pill{ display:inline-block; background: #eef6f7; color: var(--brand-ink); padding:2px 10px; border-radius:999px; font-size:12px; margin:2px 6px 2px 0; }
+
+    .role{ display:flex; justify-content:space-between; gap:14px; }
+    .role h3{ margin:0; font-size:16px; }
+    .role small{ color:var(--muted); white-space:nowrap; }
+    ul{ margin:.35rem 0 .5rem 1.05rem; }
+
+    .kicker{ font-weight:700; color:var(--brand-ink); }
+    .muted{ color:var(--muted); }
+
+    /* print styles */
+    @media print{
+      body{ background:#fff; }
+      .page{ box-shadow:none; border-radius:0; margin:0; }
+      .actions{ display:none !important; }
+      .btn{ display:none !important; }
+      a{ color:inherit; }
+      @page{ size: A4; margin: 10mm; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" id="cv">
+    <header class="hero">
+      <div class="actions">
+        <button class="btn" onclick="window.print()">Print / Save PDF</button>
+        <button class="btn secondary" onclick="downloadHTML()">Download HTML</button>
+      </div>
+      <div class="toprow">
+        <div class="avatar" aria-hidden="true">
+          <!-- coffee cup icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 10h13a4 4 0 0 0 0 8H8a4 4 0 0 1-4-4v-4z"/>
+            <path d="M17 10h1a3 3 0 1 1 0 6h-1"/>
+            <path d="M6 2v2M10 2v2M14 2v2"/>
+          </svg>
+        </div>
+        <div class="titleblock">
+          <h1>ESTHER WANJIRU KIOGORA</h1>
+          <p class="tagline">Hospitality Professional • Barista & Mixology • Customer Service</p>
+          <div class="divider"></div>
+          <div class="contacts" role="list">
+            <span class="chip" role="listitem" title="Phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.09 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.2 2 2 0 0 1 4 2h2a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L7.1 9.91a16 16 0 0 0 6 6l1.47-1.07a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z"/></svg>
+              +254 790613921 / +254 731465961
+            </span>
+            <span class="chip" role="listitem" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              estherkiogora2025@gmail.com
+            </span>
+            <span class="chip" role="listitem" title="Location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Nairobi, Kenya
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <!-- MAIN COLUMN -->
+      <div>
+        <section class="card">
+          <h2>Objective</h2>
+          <p>Dedicated hospitality professional with proven expertise in <span class="kicker">barista and mixology</span> services, customer care, and sales. Recognized for delivering exceptional guest experiences, meticulous attention to detail, and collaborative teamwork. Seeking to leverage these strengths in a dynamic hospitality or customer-focused role.</p>
+        </section>
+
+        <section class="card">
+          <h2>Experience</h2>
+
+          <div class="role"><h3>Mada Hotels — Barista & Mixology</h3><small>Jul 2025 – Present</small></div>
+          <ul>
+            <li>Prepared and served a variety of specialty coffees, teas, and cocktails to brand standards.</li>
+            <li>Created infusions, syrups, and garnishes that elevated signature beverages and repeat orders.</li>
+            <li>Maintained rigorous hygiene and safety compliance; organized bar tools and glassware.</li>
+            <li>Tracked inventory and restocked supplies to ensure uninterrupted service.</li>
+            <li>Engaged guests with tailored recommendations, boosting loyalty and satisfaction.</li>
+          </ul>
+
+          <div class="role"><h3>Zurisana Bristol & Café — Barista & Waiter</h3><small>2023 – 2024</small></div>
+          <ul>
+            <li>Crafted hot and cold beverages; upheld consistent taste and presentation quality.</li>
+            <li>Assisted with stock control, reducing shortages and improving readiness.</li>
+            <li>Ensured sanitation across stations; welcomed and served guests with warmth.</li>
+          </ul>
+
+          <div class="role"><h3>MNL Packaging — Sales & Marketing</h3><small>Jan 2023 – Aug 2023</small></div>
+          <ul>
+            <li>Promoted packaging solutions to clients and maintained customer relationships.</li>
+            <li>Supported sales targets through product knowledge and responsive service.</li>
+          </ul>
+
+          <div class="role"><h3>Kenya National Police Service (1C3 Call Center) — Call Taker</h3><small>Jan 2022 – Dec 2022</small></div>
+          <ul>
+            <li>Handled emergency and inquiry calls; routed cases efficiently for resolution.</li>
+            <li>Provided calm, accurate assistance under pressure.</li>
+          </ul>
+
+          <div class="role"><h3>Lisha Milk Company — Cleaner</h3><small>2017 – 2018</small></div>
+          <ul>
+            <li>Maintained hygiene standards for office spaces through scheduled cleaning routines.</li>
+            <li>Restocked restroom supplies and executed daily disinfecting tasks.</li>
+          </ul>
+
+          <div class="role"><h3>PCEA Church — Sunday School Teacher & Youth Treasurer</h3><small>2018 – 2020</small></div>
+          <ul>
+            <li>Taught and mentored children; organized spiritual and social youth events.</li>
+            <li>Managed youth finances with transparency and accuracy.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Achievements</h2>
+          <ul>
+            <li>Introduced creative beverage infusions at Mada Hotels that improved guest feedback scores.</li>
+            <li>Recognized for strong teamwork and service excellence at Zurisana Café.</li>
+            <li>Trusted with cross-functional responsibilities across sales, customer care, and hospitality.</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- SIDEBAR COLUMN -->
+      <aside>
+        <section class="card">
+          <h2>Skills</h2>
+          <div class="pill">Coffee preparation</div>
+          <div class="pill">Mixology & cocktails</div>
+          <div class="pill">Guest service excellence</div>
+          <div class="pill">Inventory management</div>
+          <div class="pill">First Aid & emergency care</div>
+          <div class="pill">Computer: Word, Excel, Internet</div>
+          <div class="pill">Communication</div>
+          <div class="pill">Teamwork</div>
+          <div class="pill">Attention to detail</div>
+          <div class="pill">Adaptability</div>
+          <div class="pill">Problem solving</div>
+        </section>
+
+        <section class="card">
+          <h2>Education</h2>
+          <p><span class="kicker">Boma International College of Hospitality</span><br><span class="muted">Mixology Certificate (2025)</span></p>
+          <p><span class="kicker">Nairobi School of Coffee</span><br><span class="muted">Barista Training Certificate (2023)</span></p>
+          <p><span class="kicker">Kenya National Youth Service</span><br><span class="muted">Paramilitary Training & Certificate (2021–2022)</span></p>
+          <p><span class="kicker">Makuri Girls High School</span><br><span class="muted">KCSE (2016)</span></p>
+          <p><span class="kicker">St. Eugenia Primary School</span><br><span class="muted">KCPE (2012)</span></p>
+        </section>
+
+        <section class="card">
+          <h2>Languages</h2>
+          <p>English (Fluent)<br>Kiswahili (Fluent)</p>
+        </section>
+
+        <section class="card">
+          <h2>Interests</h2>
+          <p>Travelling & exploring new places<br>Socializing & community involvement</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    function downloadHTML(){
+      const html = `<!DOCTYPE html>\n` + document.documentElement.outerHTML;
+      const blob = new Blob([html], {type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Esther_Wanjiru_Kiogora_CV.html';
+      document.body.appendChild(a); a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 0);
+    }
+  </script>
+</body>
+</html>
